@@ -1,0 +1,28 @@
+---
+title: GCP Cloud Run Scalable Product Catalog Import
+description: "Client needed to speed up eCommerce catalog imports into BigCommerce!"
+date: March 1, 2023
+---
+
+Ok, so lately I've been having all kinds of fun with random projects. 
+
+
+## GCP Cloud Run Scalable Product Catalog Import API Proof of Concept
+
+I created a proof of concept for a client to show a Python API
+which could be scaled up to process tens of thousands of requests
+per day.  
+
+I started out thinking we would use GCP Pub/Sub with a Cloud Run microservice, 
+but PubSub was acting very strange.  It was very slow adding new items onto the queue.
+Also tested with NodeJS and it was also slow.
+
+So then I switched to use GCP Cloud Tasks, which was amazing!  It was super fast and
+easy to use.  I was able to create a scalable API that could process 1000s of requests
+per second.  Even when putting 55K messages on the task queue, I was queing them
+at a rate of 0.0000145 ms per message.  That's 0.0145 ms per 1000 messages.  That's
+fast enough to process 1000s of requests per second.
+
+Look forward to creating a highly scalable product catalog import system!  
+Now to find out how quickly BigCommerce can ingest on it's side handling a TON
+of simultaneous requests.
