@@ -1,3 +1,4 @@
+
 const sunIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +49,6 @@ const moonIcon = (
 );
 
 const ThemeSwitcher = () => {
-  return "";
   return (
     <div className="flex mt-6 bg-white justify-center dark:bg-gray-900 rounded-3xl p-1">
       <button

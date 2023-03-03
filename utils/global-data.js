@@ -7,7 +7,7 @@ export const getGlobalData = () => {
     : 'My Cloud / eCommerce Architect Projects and Thoughts';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
-    : 'Copyright 2023 - Patrick Steil - All rights reserved.';
+    : 'Copyright 2023 - Patrick Steil - All rights reserved. patrick@infranet.com';
 
   return {
     name,
